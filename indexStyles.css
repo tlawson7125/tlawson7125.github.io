@@ -1,0 +1,158 @@
+* {
+	box-sizing: border-box;
+}
+
+body, html {
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	background: rgb(90,37,65);
+	background: linear-gradient(90deg, rgba(90,37,65,1) 0%, rgba(242,79,120,1) 50%, rgba(232,249,237,1) 100%);
+	color: white;
+	display: grid;
+	grid-template-rows: 35% 10% 55%;
+	grid-template-columns: 35% 30% 35%;
+}
+
+div {
+	color: white;
+	text-align: center;
+}
+
+div:nth-of-type(1) {
+	grid-row: 1 / 2;
+	grid-column: 1 / 4;
+}
+
+div h1 {
+	font-weight: lighter;
+	font-style: italic;
+	font-size: 7.5vw;
+	padding-top: 1em;
+}
+
+div:nth-of-type(2) {
+	grid-row: 2 / 3;
+	grid-column: 1 / 4;
+}
+
+div h2 {
+	font-weight: lighter;
+	font-size: 3.5vw;
+
+}
+
+div:nth-of-type(3) {
+	grid-row: 3 / 4;
+	grid-column: 1 / 2;
+}
+
+div img {
+	float: top;
+	margin: 0 auto;
+}
+
+div h3 {
+	float: bottom;
+	font-weight: lighter;
+	font-family: Roboto;
+	font-size: 2.5vw;
+}
+
+
+div:nth-of-type(4) {
+	grid-row: 3 / 4;
+	grid-column: 2 / 3;
+	color: #624bc2;
+	
+}
+
+.button {
+	float: bottom;
+	background: #624bc2;
+	width: 12vw;
+	height: 8vh;
+	margin: 0 auto;
+	border-radius: 15px;
+}
+
+.button:hover {
+	background: #e8f9ed;
+}
+
+.button a {
+	color: #f24f78;
+	width: 100%;
+	height: 100%;
+	font-size: 2.2vw;
+}
+
+div:nth-of-type(5) {
+	grid-row: 3 / 4;
+	grid-column: 3 / 4;
+	color: #5a2541;
+	
+}
+
+/* media query for mobile portrait layout (675px or less) */
+@media only screen and (max-width: 675px) {
+	html {
+		position: relative;
+	} 
+
+	body {
+		display: grid;
+		grid-template-rows: 10% 8% 26% 26% 30%;
+		grid-template-columns: 100%;
+	}
+
+	div:nth-of-type(1) {
+	grid-row: 1 / 2;
+	grid-column: 1 / 2;
+	}
+
+	div:nth-of-type(2) {
+		grid-row: 2 / 3;
+		grid-column: 1 / 2;
+	}
+
+	div:nth-of-type(3) {
+		grid-row: 3 / 4;
+		grid-column: 1 / 2;		
+	}
+
+	div:nth-of-type(4) {
+		grid-row: 4 / 5;
+		grid-column: 1 / 2;
+	}
+
+	div:nth-of-type(5) {
+		grid-row: 5 / 6;
+		grid-column: 1 / 2;
+	}
+
+	div img {
+		max-height: 20vh;
+	}
+
+	.button {
+		position: absolute;
+		margin-left: 39.5vw;
+		margin-bottom: 1vh;
+		bottom: 0;
+		height: 30px;
+		width: 100px;
+	}
+
+	.button a {
+		font-size: 3vw;
+	}
+
+	div h3 {
+		font-size: 7vw;
+	}
+}
